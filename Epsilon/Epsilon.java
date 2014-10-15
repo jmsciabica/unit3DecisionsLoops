@@ -12,12 +12,12 @@ public class Epsilon
        
        String magnitude = "";
        if (Math.abs(value) < 1.0)
-       {
+       { main(_args_)
            magnitude = "small"; 
        }
        else if (Math.abs(value) > 1000000.0)
        {
-           magnitude = "small"; 
+           magnitude = "big"; 
        }
        
        if (Math.abs(value - 0)< EPSILON)
@@ -26,11 +26,11 @@ public class Epsilon
        }
        else if(value > 0)
        {
-           System.out.println("Value is a " + magnitude + "postitive number.");
+           System.out.println("Value is a " + magnitude + " postitive number.");
        }
        else
        {
-          System.out.println("Value is a " + magnitude + "negative number.");
+          System.out.println("Value is a " + magnitude + " negative number.");
        }
        }
 }
