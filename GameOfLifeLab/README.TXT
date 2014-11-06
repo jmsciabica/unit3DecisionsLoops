@@ -66,6 +66,15 @@ Artifacts to Produce:
 	like or dislike and why? What was surprising or unexpected? What did you
 	learn? What questions do you still have? What advice would you offer next
 	year's students?
+*8x8 
+*circle
+*no actor
+*ship tie,beacon(period 2), Glider
+*400 generations
+*30 seconds
+*No they just fall off the edge
+
+
 
 
 Submission:
