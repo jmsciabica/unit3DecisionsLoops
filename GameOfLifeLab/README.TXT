@@ -67,15 +67,12 @@ Artifacts to Produce:
 	learn? What questions do you still have? What advice would you offer next
 	year's students?
 *8x8 
-*circle
-*no actor
+*rock
+*actor
 *ship tie,beacon(period 2), Glider
-*400 generations
-*30 seconds
+*100 generations
+*6 seconds
 *No they just fall off the edge
-
-
-
 
 Submission:
 
