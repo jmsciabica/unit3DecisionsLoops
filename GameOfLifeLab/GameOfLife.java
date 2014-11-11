@@ -1,9 +1,13 @@
+
+import static org.junit.Assert.*;
 import info.gridworld.actor.Actor;
 import info.gridworld.actor.ActorWorld;
 import info.gridworld.actor.Rock;
 import info.gridworld.grid.Grid;
 import info.gridworld.grid.BoundedGrid;
 import info.gridworld.grid.Location;
+import java.util.ArrayList;
+import java.lang.*;
 
 /**
  * Game of Life starter code. Demonstrates how to create and populate the game using the GridWorld framework.
@@ -186,16 +190,43 @@ public class GameOfLife
      * @post    the world has been populated with a new grid containing the next generation
      * 
      */
-    private void createNextGeneration()
+    public void createNextGeneration()
     {
         /** You will need to read the documentation for the World, Grid, and Location classes
          *      in order to implement the Game of Life algorithm and leverage the GridWorld framework.
          */
-        
-        // create the grid, of the specified size, that contains Actors
         Grid<Actor> grid = world.getGrid();
-        
-       
+        BoundedGrid<Actor> grid2 = new BoundedGrid<Actor>(ROWS, COLS);
+        GameOfLife game = new GameOfLife();
+        final int ROWS = game.getNumRows();
+        final int COLS = game.getNumCols();
+
+        for(int row = 0; row < ROWS; row++)
+        {
+            for(int col = 0; col < COLS; col++)
+            {
+                Actor cell = game.getActor(row, col);
+                Location loc = new Location(row, col);
+                Rock rock30 = new Rock();
+                if(getActor(row,col)!= null) 
+                {
+                    int n = grid.getNeighbors(new Location(row,col)).size();
+                    if ((n<2)||(n>3))
+                    {
+                        grid.remove(new Location(col,row));
+                    }
+                    else if (n == 3 )
+                    {
+                        grid.put(new Location(col,row),rock30);
+                    }
+                    else
+                    {}
+                } 
+                else 
+                {
+                }
+            }
+        }
     }
       
     /**
@@ -240,7 +271,12 @@ public class GameOfLife
      */
     public static void main(String[] args)
     {
-        GameOfLife game = new GameOfLife();
+        boolean yes = true;
+        while (yes == true)
+        {   
+            GameOfLife game = new GameOfLife();
+            game.createNextGeneration();
+        }
     }
 
 }

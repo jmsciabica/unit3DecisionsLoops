@@ -141,8 +141,6 @@ public class GameOfLifeTest
         
         GameOfLife game = new GameOfLife();
         game.createNextGeneration();
-        game.createNextGeneration();
-        game.createNextGeneration();
         final int ROWS = game.getNumRows();
         final int COLS = game.getNumCols();
         
@@ -161,7 +159,7 @@ public class GameOfLifeTest
                         (row == 3 && col == 2) ||
                         (row == 3 && col == 3) ||
                         (row == 3 && col == 9) ||
-                        (row == 3 && col == 10) ||
+                        (row == 3 && col == 10)||
                         (row == 4 && col == 5) ||
                         (row == 4 && col == 6) ||
                         (row == 4 && col == 7) ||
