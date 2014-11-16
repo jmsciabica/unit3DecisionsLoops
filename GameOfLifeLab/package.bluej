@@ -3,11 +3,24 @@ dependency1.from=GameOfLifeTest
 dependency1.to=GameOfLife
 dependency1.type=UsesDependency
 objectbench.height=100
+<<<<<<< HEAD
+objectbench.width=956
+package.editor.height=400
+package.editor.width=858
+package.editor.x=596
+package.editor.y=115
+=======
 objectbench.width=554
 package.editor.height=400
 package.editor.width=761
+<<<<<<< HEAD
 package.editor.x=316
 package.editor.y=97
+=======
+package.editor.x=308
+package.editor.y=38
+>>>>>>> origin/master
+>>>>>>> origin/master
 package.numDependencies=1
 package.numTargets=2
 package.showExtends=true
@@ -17,24 +30,49 @@ readme.editor.height=700
 readme.editor.width=900
 readme.editor.x=0
 readme.editor.y=22
+<<<<<<< HEAD
+target1.association=GameOfLifeTest
+target1.editor.height=877
+target1.editor.width=966
+target1.editor.x=637
+target1.editor.y=39
+=======
 target1.editor.height=862
 target1.editor.width=821
 target1.editor.x=136
 target1.editor.y=48
+>>>>>>> origin/master
 target1.height=50
 target1.name=GameOfLifeTest
 target1.naviview.expanded=true
 target1.showInterface=false
 target1.type=UnitTestTargetJunit4
 target1.typeParameters=
+<<<<<<< HEAD
+target1.width=100
+target1.x=70
+target1.y=130
+target2.editor.height=850
+target2.editor.width=900
+target2.editor.x=189
+target2.editor.y=105
+=======
 target1.width=120
 target1.x=100
 target1.y=100
 target2.association=GameOfLifeTest
+<<<<<<< HEAD
 target2.editor.height=860
 target2.editor.width=882
 target2.editor.x=745
 target2.editor.y=0
+=======
+target2.editor.height=876
+target2.editor.width=1616
+target2.editor.x=-8
+target2.editor.y=-8
+>>>>>>> origin/master
+>>>>>>> origin/master
 target2.height=50
 target2.name=GameOfLife
 target2.naviview.expanded=true

@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
+>>>>>>> origin/master
 import static org.junit.Assert.*;
 import info.gridworld.actor.Actor;
 import info.gridworld.actor.ActorWorld;
@@ -202,8 +209,29 @@ public class GameOfLife
             for(int col = 0; col < COLS; col++)
             {
                 Location loc = new Location(row, col);
+<<<<<<< HEAD
                 Rock rock = new Rock();
                 ArrayList<Actor> a = grid.getNeighbors(loc);
+=======
+                Rock rock30 = new Rock();
+<<<<<<< HEAD
+                
+                if(getActor(row,col)!= null) 
+                {
+                    ArrayList<Actor> actor = grid.getNeighbors(loc);
+                    if ((actor.size() < 2)||(actor.size()>3))
+                    {
+                        grid2.remove(loc);
+                    }
+                    else if (actor.size()== 3 )
+                    {
+                        grid2.put(loc,rock30);
+                    }
+                    else
+                    {
+                    }
+=======
+>>>>>>> origin/master
                 if(getActor(row,col)!= null) 
                 {
                     if ((a.size()<2)|| (a.size() > 3))
@@ -217,18 +245,30 @@ public class GameOfLife
                     }
                     
                     else
+<<<<<<< HEAD
                     {
                         if ((a.size() == 2))
                         {
                             grid2.put(loc,rock);
                         }
                     }
+=======
+                    {}
+>>>>>>> origin/master
+>>>>>>> origin/master
                 } 
                 else if ((a.size() == 3))
                 {grid2.put(loc,rock);}
             }
         }
+<<<<<<< HEAD
         world.setGrid(grid2);
+=======
+<<<<<<< HEAD
+        world.setGrid(grid2);
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
     }
       
     /**
