@@ -1,4 +1,3 @@
-
 import static org.junit.Assert.*;
 import info.gridworld.actor.Actor;
 import info.gridworld.actor.ActorWorld;
@@ -7,7 +6,7 @@ import info.gridworld.grid.Grid;
 import info.gridworld.grid.BoundedGrid;
 import info.gridworld.grid.Location;
 import java.util.ArrayList;
-import java.lang.*;
+import java.lang.InterruptedException;
 
 /**
  * Game of Life starter code. Demonstrates how to create and populate the game using the GridWorld framework.
@@ -197,36 +196,39 @@ public class GameOfLife
          */
         Grid<Actor> grid = world.getGrid();
         BoundedGrid<Actor> grid2 = new BoundedGrid<Actor>(ROWS, COLS);
-        GameOfLife game = new GameOfLife();
-        final int ROWS = game.getNumRows();
-        final int COLS = game.getNumCols();
 
         for(int row = 0; row < ROWS; row++)
         {
             for(int col = 0; col < COLS; col++)
             {
-                Actor cell = game.getActor(row, col);
                 Location loc = new Location(row, col);
-                Rock rock30 = new Rock();
+                Rock rock = new Rock();
+                ArrayList<Actor> a = grid.getNeighbors(loc);
                 if(getActor(row,col)!= null) 
                 {
-                    int n = grid.getNeighbors(new Location(row,col)).size();
-                    if ((n<2)||(n>3))
+                    if ((a.size()<2)|| (a.size() > 3))
                     {
-                        grid.remove(new Location(col,row));
+                        grid2.remove(loc);
                     }
-                    else if (n == 3 )
+                    
+                    else if ((a.size() > 2))
                     {
-                        grid.put(new Location(col,row),rock30);
+                        grid2.put(loc,rock);
                     }
+                    
                     else
-                    {}
+                    {
+                        if ((a.size() == 2))
+                        {
+                            grid2.put(loc,rock);
+                        }
+                    }
                 } 
-                else 
-                {
-                }
+                else if ((a.size() == 3))
+                {grid2.put(loc,rock);}
             }
         }
+        world.setGrid(grid2);
     }
       
     /**
@@ -270,13 +272,15 @@ public class GameOfLife
      *
      */
     public static void main(String[] args)
+    throws InterruptedException
     {
         boolean yes = true;
+        GameOfLife game = new GameOfLife();
         while (yes == true)
         {   
-            GameOfLife game = new GameOfLife();
             game.createNextGeneration();
+            Thread.sleep(10000);
+
         }
     }
-
 }

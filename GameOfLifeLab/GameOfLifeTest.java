@@ -141,6 +141,8 @@ public class GameOfLifeTest
         
         GameOfLife game = new GameOfLife();
         game.createNextGeneration();
+        game.createNextGeneration();
+        game.createNextGeneration();
         final int ROWS = game.getNumRows();
         final int COLS = game.getNumCols();
         
